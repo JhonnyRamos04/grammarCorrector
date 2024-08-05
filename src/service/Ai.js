@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAi = new GoogleGenerativeAI("AIzaSyBp37VmfHh8LwebGa1Oztzn4LvPj2rTUTM")
+const genAi = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY)
 
 export async function FixGrammar(prompt) {
   const model = genAi.getGenerativeModel({ model: "gemini-1.5-pro-latest" })
