@@ -9,7 +9,7 @@ export const useAI = () => {
 
   const { setCorrectText, extendText, setExtendText, data, setData } = useContext(GrammarContext)
   const previusPrompt = useRef(data)
-  console.log(extendText)
+
 
   useEffect(() => {
     if (!data) return
