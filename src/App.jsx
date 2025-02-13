@@ -13,7 +13,7 @@ function App() {
       <div className="absolute dark:bg-gray-800 h-screen w-screen -z-10"></div>
       <Header />
       <main className="w-full h-full flex-wrap flex justify-start items-center md:justify-center flex-col mt-10  ">
-        <section className="flex flex-col md:flex-row gap-y-2 gap-x-5">
+        <section className="flex flex-col md:flex-row gap-y-2 gap-x-5 max-w-screen-lg">
           <Form />
           <Paragraph />
         </section>
