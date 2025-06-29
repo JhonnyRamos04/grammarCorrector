@@ -15,3 +15,10 @@ export async function ExtendText(prompt) {
   const response = result.response;
   return response.text()
 }
+
+export async function SummarizeText(prompt) {
+  const model = genAi.getGenerativeModel({ model: "gemini-2.0-flash" })
+  const result = await model.generateContent(`Me puedes hacer un resumen conciso y claro del siguiente texto, manteniendo los puntos más importantes:${prompt}`);
+  const response = result.response;
+  return response.text()
+}

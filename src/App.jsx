@@ -10,15 +10,20 @@ function App() {
 
   return (
     <GrammarProvider>
-      <div className="absolute dark:bg-gray-800 h-screen w-screen -z-10"></div>
-      <Header />
-      <main className="w-full h-full flex-wrap flex justify-start items-center md:justify-center flex-col mt-10  ">
-        <section className="flex flex-col md:flex-row gap-y-2 gap-x-5 max-w-screen-lg">
-          <Form />
-          <Paragraph />
-        </section>
-      </main>
-      <Footer />
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <Header />
+        <main className="container mx-auto px-4 py-8 max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
+            <div className="w-full lg:w-1/2">
+              <Form />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <Paragraph />
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
     </GrammarProvider>
   )
 }

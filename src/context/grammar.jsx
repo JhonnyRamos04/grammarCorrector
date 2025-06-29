@@ -6,6 +6,7 @@ export function GrammarProvider({ children }) {
     const [correctText, setCorrectText] = useState('')
     const [data, setData] = useState('')
     const [extendText, setExtendText] = useState(false)
+    const [summarizeText, setSummarizeText] = useState(false)
 
     return (
         <GrammarContext.Provider value={{
@@ -14,7 +15,9 @@ export function GrammarProvider({ children }) {
             data,
             setData,
             extendText,
-            setExtendText
+            setExtendText,
+            summarizeText,
+            setSummarizeText
         }}>
             {children}
         </GrammarContext.Provider>
